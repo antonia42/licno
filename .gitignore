@@ -1,0 +1,8 @@
+# Ignore pyc files
+*.pyc
+
+# Ignore datafiles
+./data/*
+
+# Ignore tar.gz files
+*.tar.gz
