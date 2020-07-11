@@ -11,15 +11,9 @@ We model interactions of two types of nodes, users and content, and introduce an
 **LiCNo** (**Li**nking **C**ontent **No**des) is an event detection framework that utilizes a novel representation that considers both the content and the structure of a social network. More specifically, we model the streaming data as a dynamic, heterogeneous graph. Our approach treats large connected components of this graph as indicators of events. The intuition is that when there are a lot of users who either directly interact with each other (as seen with the network structure) or, indirectly, talk about similar topics (based on the text similarity), then these users form large connected components.
 
 The contributions of this work can be summarized as follows:
-1. **Network Representation**: We introduce a novel representation of a network as a dynamic heterogeneous graph, the Content
-Network. e utility of such a graph in other tasks has been recently
-discussed in the literature [4, 17].
-2. **Revealing Hidden Links**: We provide an algorithm that identi-
-es hidden links in Content Networks by connecting similar content
-nodes utilizing neural word embeddings.
-3. **Event Detection**: We present an algorithm for detecting events
-by tracking large connected components of Content Networks over
-time. Our results demonstrate, that we are able to eectively identify events compared to widely used event detection techniques.
+1. **Network Representation**: We introduce a novel representation of a network as a dynamic heterogeneous graph, the Content Network. 
+2. **Revealing Hidden Links**: We provide an algorithm that identifies hidden links in Content Networks by connecting similar content nodes utilizing neural word embeddings.
+3. **Event Detection**: We present an algorithm for detecting events by tracking large connected components of Content Networks over time. Our results demonstrate, that we are able to effectively identify events compared to widely used event detection techniques.
 
 
 If you make use of this code, the LiCNo algorithm, or the datasets in your work, please cite the following paper:
@@ -51,12 +45,11 @@ t0	u0	the brown fox jumped over the lazy dog	1594426186
 t1	u0	brown fox cat dog	1594426189	t0	u0
 t2	u1	icecream summer vacations	1594426199		
 t3	u2	sea beach iced coffee	1594426206	t2	u1
-
 ```
 
 
 ### References 
-*Saravanou, A., Katakis, I., Valkanas, G., Kalogeraki, V. and Gunopulos, D., 2017, November. *Revealing the hidden links in content networks: An application to event discovery*. In Proceedings of the 2017 ACM on Conference on Information and Knowledge Management (pp. 2283-2286). 
+Saravanou, A., Katakis, I., Valkanas, G., Kalogeraki, V. and Gunopulos, D., 2017, November. *Revealing the hidden links in content networks: An application to event discovery*. In Proceedings of the 2017 ACM on Conference on Information and Knowledge Management (pp. 2283-2286). 
 
 If you make use of this code, the LiCNo algorithm, or the dataset in your work, please cite the following paper:
 ```
