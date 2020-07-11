@@ -193,3 +193,4 @@ def ground_truth():
             gt_binary.append(0)
 
     return gt_binary
+

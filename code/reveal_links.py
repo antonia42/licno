@@ -1,7 +1,7 @@
 import sys
 
 import networkx as nx
-from simhash import Simhash, SimhashIndex
+#from simhash import Simhash, SimhashIndex
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 

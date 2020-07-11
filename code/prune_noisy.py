@@ -1,5 +1,5 @@
 import networkx as nx
-
+import numpy as np
 
 def get_publisher_nodes(nodeslist):
     """
@@ -70,4 +70,4 @@ def prune_noisy_CCs(G):
     G.remove_nodes_from(noisy_nodeslist)
     # print 'after', len(G.nodes())
 
-    return (G, cc_lengths)
+    return (G, np.array(cc_lengths))

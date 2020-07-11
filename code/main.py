@@ -57,7 +57,7 @@ def run_main(filename, G_cache, w2v_model, k, sim_thres, theta=10, avg=0,
     """
     # Step 1: Create Snapshot Graph
     (G, content_dict) = twitter_graph(filename)
-
+    print(G.edges(), "\n\n\n")
     # Step 2: Reveal Hidden Links
     if reveal_method == 'simhash':
         G = reveal_hidden_links_simhash(G, content_dict, sim_thres)
@@ -71,9 +71,11 @@ def run_main(filename, G_cache, w2v_model, k, sim_thres, theta=10, avg=0,
 
     # Step 3: Prune Noisy CCs
     (G, cc_lengths) = prune_noisy_CCs(G)
+    print("info", len(G.nodes()))
 
     # Step 4: Detect events
     result = detect_events(G, G_cache, theta, avg, std, cc_lengths)
+    print("info", result)
 
     return result
 
@@ -137,7 +139,7 @@ if __name__ == "__main__":
     #   - a timestamp in epoch formatting,
     #   - a tweet id to which it replies (if the current tweet is a reply),
     #   - a user id to whom it replies (if the current tweet is a reply)
-    datapath = '../data/twitter/'
+    datapath = '.././data/'
 
     # binary list with the ground truth, if the value of a cell is '1' it
     # indicates the existence of an event for the time window with id the index
